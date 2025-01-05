@@ -1,49 +1,39 @@
 {
-  "name": "@xenobytezero/editorjs-default-toolpack",
-  "repository": "https://github.com/xenobytezero/editorjs-default-toolpack",
-  "version": "1.0.4",
-  "packageManager": "yarn@3.6.0",
-  "scripts": {
-    "develop": "vite build --watch",
-    "build": "tsc && vite build"
-  },
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+    "name": "@xenobytezero/editorjs-toolpack-default",
+    "version": "1.0.4",
+    "devDependencies": {
+        "@editorjs/checklist": "1.6.0",
+        "@editorjs/code": "2.9.3",
+        "@editorjs/delimiter": "1.4.2",
+        "@editorjs/editorjs": "2.30.7",
+        "@editorjs/embed": "2.7.6",
+        "@editorjs/header": "2.8.8",
+        "@editorjs/image": "2.10.1",
+        "@editorjs/inline-code": "1.5.1",
+        "@editorjs/link": "2.6.2",
+        "@editorjs/list": "1.10.0",
+        "@editorjs/marker": "1.4.0",
+        "@editorjs/paragraph": "2.11.7",
+        "@editorjs/quote": "2.7.6",
+        "@editorjs/raw": "2.5.1",
+        "@editorjs/table": "2.4.3",
+        "@editorjs/warning": "1.4.1",
+        "@types/react": "^18.3.18",
+        "@xenobytezero/strapi-plugin-react-editorjs": "workspace:*",
+        "typescript": "5.7.2",
+        "vite": "^4.3.9"
     },
-    "./tools": {
-      "import": "./dist/tools.mjs",
-      "types": "./dist/tools.d.ts"
+    "main": "./dist/toolpack.mjs",
+    "files": [
+        "./dist"
+    ],
+    "packageManager": "yarn@3.6.0",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
+    "repository": "https://github.com/xenobytezero/editorjs-default-toolpack",
+    "scripts": {
+        "build": "tsc && vite build",
+        "develop": "vite build --watch"
     }
-  },
-  "devDependencies": {
-    "@editorjs/checklist": "1.5.0",
-    "@editorjs/code": "2.8.0",
-    "@editorjs/delimiter": "1.3.0",
-    "@editorjs/editorjs": "2.27.0",
-    "@editorjs/embed": "2.5.3",
-    "@editorjs/header": "2.7.0",
-    "@editorjs/image": "2.8.1",
-    "@editorjs/inline-code": "1.4.0",
-    "@editorjs/link": "2.5.0",
-    "@editorjs/list": "1.8.0",
-    "@editorjs/marker": "1.3.0",
-    "@editorjs/paragraph": "2.9.0",
-    "@editorjs/quote": "2.5.0",
-    "@editorjs/raw": "2.4.0",
-    "@editorjs/table": "2.2.1",
-    "@editorjs/warning": "1.3.0",
-    "@xenobytezero/strapi-plugin-react-editorjs": "workspace:*",
-    "axios": "^1.4.0",
-    "typescript": "5.2.2",
-    "vite": "^4.3.9",
-    "vite-plugin-dts": "^3.3.0"
-  },
-  "files": [
-    "./dist"
-  ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  }
 }
